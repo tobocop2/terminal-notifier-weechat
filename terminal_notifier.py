@@ -56,7 +56,7 @@ def notify(data, signal, signal_data):
         title = "WeeChat"
 
     message = "\t".join(separated[1:])
-    notification = f'display notification "{message}" with title "{title}""'
+    notification = f'display notification "{message}" with title "{title}"'
     process = subprocess.Popen("osascript -".split(), stdin=subprocess.PIPE,
                                stdout=subprocess.PIPE, stderr=subprocess.PIPE)
     process.communicate(notification.encode())
